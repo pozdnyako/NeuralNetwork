@@ -1,16 +1,16 @@
 # depslib dependency file v1.0
-1574198707 source:d:\users\admin\documents\github\neuralnetwork\neuralnetwork.cpp
+1574199384 source:d:\users\admin\documents\github\neuralnetwork\neuralnetwork.cpp
 	"Debug.hpp"
 	"NeuralNetwork.hpp"
 
 1574196434 d:\users\admin\documents\github\neuralnetwork\neuralnetwork.h
 	"Layer.h"
 
-1574198929 source:d:\users\admin\documents\github\neuralnetwork\main.cpp
+1574201846 source:d:\users\admin\documents\github\neuralnetwork\main.cpp
 	<iostream>
 	"NeuralNetwork.hpp"
 
-1574199066 source:d:\users\admin\documents\github\neuralnetwork\neuron.cpp
+1574199384 source:d:\users\admin\documents\github\neuralnetwork\neuron.cpp
 	"Debug.hpp"
 	"Neuron.hpp"
 	<iostream>
@@ -26,7 +26,7 @@
 
 1574147714 d:\users\admin\documents\github\neuralnetwork\funcs.h
 
-1574198658 source:d:\users\admin\documents\github\neuralnetwork\layer.cpp
+1574199384 source:d:\users\admin\documents\github\neuralnetwork\layer.cpp
 	"Debug.hpp"
 	"Layer.hpp"
 
@@ -34,7 +34,7 @@
 	"Matrix.h"
 	"Neuron.h"
 
-1574197629 source:d:\users\admin\documents\github\neuralnetwork\debug.cpp
+1574199384 source:d:\users\admin\documents\github\neuralnetwork\debug.cpp
 	"Debug.hpp"
 
 1574137850 d:\users\admin\documents\github\neuralnetwork\debug.h
@@ -44,42 +44,42 @@
 	<iostream>
 	<vector>
 
-1574197630 source:d:\users\admin\documents\github\neuralnetwork\matrix.cpp
+1574199384 source:d:\users\admin\documents\github\neuralnetwork\matrix.cpp
 	"Debug.hpp"
 	"Matrix.hpp"
 	<cstdlib>
 
-1574197630 source:d:\users\admin\documents\github\neuralnetwork\feedforward.cpp
+1574199384 source:d:\users\admin\documents\github\neuralnetwork\feedforward.cpp
 	"NeuralNetwork.hpp"
 
-1574197630 source:d:\users\admin\documents\github\neuralnetwork\backpropogation.cpp
+1574199384 source:d:\users\admin\documents\github\neuralnetwork\backpropogation.cpp
 	"NeuralNetwork.hpp"
 	<algorithm>
 
-1574198877 source:d:\users\admin\documents\github\neuralnetwork\seterrors.cpp
+1574199385 source:d:\users\admin\documents\github\neuralnetwork\seterrors.cpp
 	"NeuralNetwork.hpp"
 
 1574153596 d:\users\admin\documents\github\neuralnetwork\classes.h
 
-1574197612 d:\users\admin\documents\github\neuralnetwork\neuralnetwork.hpp
+1574200230 d:\users\admin\documents\github\neuralnetwork\neuralnetwork.hpp
 	"Layer.hpp"
 
-1574198008 d:\users\admin\documents\github\neuralnetwork\layer.hpp
+1574199384 d:\users\admin\documents\github\neuralnetwork\layer.hpp
 	"Matrix.hpp"
 	"Neuron.hpp"
 
-1574148137 d:\users\admin\documents\github\neuralnetwork\matrix.hpp
+1574199384 d:\users\admin\documents\github\neuralnetwork\matrix.hpp
 	<iostream>
 	<vector>
 
-1574197855 d:\users\admin\documents\github\neuralnetwork\neuron.hpp
+1574199384 d:\users\admin\documents\github\neuralnetwork\neuron.hpp
 	"Debug.hpp"
 	<cstdio>
 	<vector>
 	"funcs.hpp"
 
-1574137850 d:\users\admin\documents\github\neuralnetwork\debug.hpp
+1574199384 d:\users\admin\documents\github\neuralnetwork\debug.hpp
 	<cstdio>
 
-1574147714 d:\users\admin\documents\github\neuralnetwork\funcs.hpp
+1574199384 d:\users\admin\documents\github\neuralnetwork\funcs.hpp
 

@@ -17,7 +17,7 @@ std::vector<double> Layer :: getActivatedVals() {
     std::vector<double> res;
 
     for(int i = 0; i < (int)neurons.size(); i++) {
-        res.push_back(neurons.at(i)->getVal());
+        res.push_back(neurons.at(i)->getActivatedVal());
     }
 
     return res;

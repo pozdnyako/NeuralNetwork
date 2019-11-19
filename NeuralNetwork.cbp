@@ -46,7 +46,6 @@
 		<Unit filename="Neuron.cpp" />
 		<Unit filename="Neuron.hpp" />
 		<Unit filename="backPropogation.cpp" />
-		<Unit filename="classes.h" />
 		<Unit filename="feedForward.cpp" />
 		<Unit filename="funcs.hpp" />
 		<Unit filename="main.cpp" />

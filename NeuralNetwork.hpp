@@ -5,7 +5,6 @@
 
 #define COST_MSE 1
 
-
 class NeuralNetworkProperty {
 public:
     NeuralNetworkProperty(){};

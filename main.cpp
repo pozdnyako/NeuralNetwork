@@ -2,23 +2,14 @@
 
 #include "NeuralNetwork.hpp"
 
-class A {
-public:
-    A(int b);
-};
-
-A :: A(int b) {
-    printf("b: %d\n", b);
-}
-
 int main() {
     NeuralNetworkProperty property;
 
     property.n_input    = 2;
     property.n_output   = 3;
 
-    property.n_h_layers = 1;
-    int n_hidden[] = {2};
+    property.n_h_layers = 2;
+    int n_hidden[] = {2, 2};
 
     property.n_hidden = std::vector<int>(n_hidden,
                                          n_hidden + sizeof(n_hidden) / sizeof(int));
@@ -48,6 +39,9 @@ int main() {
 
     for(int i = 0; i < 10000; i ++) {
         network.train(in, out);
+
+        LOG_V("%.3f", network.getActivatedVals(3));
+
         printf("\t\terror:%f\n", network.error);
     }
 
