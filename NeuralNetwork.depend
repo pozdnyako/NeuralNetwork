@@ -1,0 +1,65 @@
+# depslib dependency file v1.0
+1574151968 source:d:\users\admin\documents\github\neuralnetwork\neuralnetwork.cpp
+	"Debug.h"
+	"NeuralNetwork.h"
+
+1574150419 d:\users\admin\documents\github\neuralnetwork\neuralnetwork.h
+	"Debug.h"
+	"Layer.h"
+	<vector>
+
+1574153926 source:d:\users\admin\documents\github\neuralnetwork\main.cpp
+	<iostream>
+	"NeuralNetwork.h"
+
+1574153750 source:d:\users\admin\documents\github\neuralnetwork\neuron.cpp
+	"Debug.h"
+	"Neuron.h"
+	<iostream>
+	<cmath>
+	"funcs.h"
+	"funcs.h"
+
+1574153806 d:\users\admin\documents\github\neuralnetwork\neuron.h
+	<cstdio>
+	"funcs.h"
+
+1574147714 d:\users\admin\documents\github\neuralnetwork\funcs.h
+
+1574153352 source:d:\users\admin\documents\github\neuralnetwork\layer.cpp
+	"Debug.h"
+	"Layer.h"
+
+1574153610 d:\users\admin\documents\github\neuralnetwork\layer.h
+	"classes.h"
+	"Neuron.h"
+	"Matrix.h"
+	<vector>
+
+1574131199 source:d:\users\admin\documents\github\neuralnetwork\debug.cpp
+	"Debug.h"
+
+1574137850 d:\users\admin\documents\github\neuralnetwork\debug.h
+	<cstdio>
+
+1574148137 d:\users\admin\documents\github\neuralnetwork\matrix.h
+	<iostream>
+	<vector>
+
+1574148374 source:d:\users\admin\documents\github\neuralnetwork\matrix.cpp
+	"Debug.h"
+	"Matrix.h"
+	<cstdlib>
+
+1574145154 source:d:\users\admin\documents\github\neuralnetwork\feedforward.cpp
+	"NeuralNetwork.h"
+
+1574147045 source:d:\users\admin\documents\github\neuralnetwork\backpropogation.cpp
+	"NeuralNetwork.h"
+	<algorithm>
+
+1574150737 source:d:\users\admin\documents\github\neuralnetwork\seterrors.cpp
+	"NeuralNetwork.h"
+
+1574153596 d:\users\admin\documents\github\neuralnetwork\classes.h
+
