@@ -1,5 +1,5 @@
-#include "Debug.h"
-#include "NeuralNetwork.h"
+#include "Debug.hpp"
+#include "NeuralNetwork.hpp"
 
 void NeuralNetworkProperty :: init() {
     n_layers = n_h_layers + 2;
@@ -59,11 +59,9 @@ NeuralNetwork :: NeuralNetwork(NeuralNetworkProperty property){
         if(i < property.n_layers - 1) {
             Layer *l = new Layer(property.topology.at(i), property.aType_h);
             layers.push_back(l);
-            l->Log();
         } else {
             Layer *l = new Layer(property.topology.at(i), property.aType_o);
             layers.push_back(l);
-            l->Log();
         }
     }
 
@@ -96,18 +94,19 @@ void NeuralNetwork :: setCurrentInput(std::vector<double> input) {
 
 void NeuralNetwork :: train(std::vector<double> _input,
                             std::vector<double> _target) {
-    Log();
     setCurrentInput(_input);
-    Log();
+    //Log();
     setCurrentTarget(_target);
+    //Log();
 
-    Log();
     feedForward();
-    Log();
+    //Log();
+
     setErrors();
-    Log();
+    //Log();
+
     backPropogation();
-    Log();
+    //Log();
 }
 
 void NeuralNetwork :: Log() {

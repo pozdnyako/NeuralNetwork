@@ -1,4 +1,4 @@
-#include "NeuralNetwork.h"
+#include "NeuralNetwork.hpp"
 
 void NeuralNetwork :: setErrors() {
     switch(property.costFType) {
@@ -12,12 +12,6 @@ void NeuralNetwork :: setErrorsMSE() {
     std::vector<Neuron *> outputNeurons = layers.at(outputLayerID)->getNeurons();
 
     error = 0.0;
-
-    printf("\terrors:\n");
-
-    pTAB
-    LOG_V("%lf", target)
-    mTAB
 
     for(int i = 0; i < target.size(); i ++) {
         double t = target.at(i);

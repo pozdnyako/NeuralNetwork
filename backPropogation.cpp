@@ -1,4 +1,4 @@
-#include "NeuralNetwork.h"
+#include "NeuralNetwork.hpp"
 #include <algorithm>
 
 void NeuralNetwork :: backPropogation() {

@@ -1,15 +1,21 @@
 #include <iostream>
 
-#include "NeuralNetwork.h"
+#include "NeuralNetwork.hpp"
+
+class A {
+public:
+    A(int b);
+};
+
+A :: A(int b) {
+    printf("b: %d\n", b);
+}
 
 int main() {
-    Neuron *n = new Neuron(0.1, 1);
-
-    return 0;
     NeuralNetworkProperty property;
 
     property.n_input    = 2;
-    property.n_output   = 2;
+    property.n_output   = 3;
 
     property.n_h_layers = 1;
     int n_hidden[] = {2};
@@ -17,8 +23,8 @@ int main() {
     property.n_hidden = std::vector<int>(n_hidden,
                                          n_hidden + sizeof(n_hidden) / sizeof(int));
 
-    property.aType_h = 3;//Neuron::SIGM;
-    property.aType_o = 3;//Neuron::SIGM;
+    property.aType_h = Neuron::SIGM;
+    property.aType_o = Neuron::SIGM;
     property.costFType = 1; // NeuralNetwok.h define
 
     property.bias = 1;
@@ -27,14 +33,12 @@ int main() {
 
     property.init();
 
-    property.Log();
-
     NeuralNetwork network = NeuralNetwork(property);
 
     network.Log();
 
     double _in[] = {0.5, 0.3};
-    double _out[] = {0.3, 0.5};
+    double _out[] = {0.3, 0.5, 0.4};
 
     std::vector<double> in = std::vector<double>(_in, _in + sizeof(_in) / sizeof(double));
     std::vector<double> out = std::vector<double>(_out, _out + sizeof(_out) / sizeof(double));
@@ -42,16 +46,9 @@ int main() {
     LOG_V("% .5f", in);
     LOG_V("% .5f", out);
 
-    for(int i = 0; i < 1; i ++) {
+    for(int i = 0; i < 10000; i ++) {
         network.train(in, out);
-        //network.getWeight(0)->Log();
-        //network.getWeight(1)->Log();
-
-        //LOG_V("% .5f", network.getActivatedVals(1));
-        //LOG_V("% .5f", network.getActivatedVals(2));
-        //LOG()
-
-        //printf("\t\terror:%lf\n", network.error);
+        printf("\t\terror:%f\n", network.error);
     }
 
     return 0;

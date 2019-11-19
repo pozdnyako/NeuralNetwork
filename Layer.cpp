@@ -1,16 +1,11 @@
-#include "Debug.h"
-#include "Layer.h"
+#include "Debug.hpp"
+#include "Layer.hpp"
 
-Layer :: Layer(int size, int activationType) {
-    this->size = size;
-
-    LOG("l: %d %d", size, activationType);
-
-    for(int j = 0; j < size; j ++) {
-        Neuron *n = new Neuron(0.01, activationType);
+Layer :: Layer(int _size, int _activationType) {
+    size = _size;
+    for(int j = 0; j < _size; j ++) {
+        Neuron *n = new Neuron(0.0, _activationType);
         this->neurons.push_back(n);
-
-        n->Log();
     }
 }
 

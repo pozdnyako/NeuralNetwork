@@ -1,5 +1,5 @@
-#include "Debug.h"
-#include "Matrix.h"
+#include "Debug.hpp"
+#include "Matrix.hpp"
 
 Matrix :: Matrix(int numRows, int numCols, bool isRandom) {
     this->numRows = numRows;

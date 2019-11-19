@@ -1,4 +1,4 @@
-#include "NeuralNetwork.h"
+#include "NeuralNetwork.hpp"
 
 void NeuralNetwork :: feedForward() {
     Matrix *a;
