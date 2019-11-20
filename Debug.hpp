@@ -17,7 +17,7 @@ extern int n_tabs;
     }\
     printf("\n");
 
-#define ERROR(mod, ...) \
+#define ERROR_LOG(mod, ...) \
     for(int LOG_i = 0; LOG_i < n_tabs; LOG_i ++) {printf("\t");}\
     printf("[ERROR]\t" mod "\n", ##__VA_ARGS__);
 

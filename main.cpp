@@ -19,7 +19,7 @@ int main() {
     property.costFType = 1; // NeuralNetwok.h define
 
     property.bias = 1;
-    property.learningRate = 0.05;
+    property.learningRate = 0.5;
     property.momentum = 1;
 
     property.init();

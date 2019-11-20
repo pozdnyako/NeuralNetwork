@@ -55,9 +55,11 @@ Matrix* Layer :: derivedVals() {
 
 void Layer :: Log() {
     LOG("layer from %d neurons:", neurons.size())
+    /* // FULL LOG
     pTAB
     for(int i = 0; i < neurons.size(); i ++) {
         neurons.at(i)->Log();
     }
     mTAB
+    */
 }

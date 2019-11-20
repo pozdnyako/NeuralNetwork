@@ -7,6 +7,8 @@ void NeuralNetwork :: setErrors() {
     }
 }
 
+#include <cmath>
+
 void NeuralNetwork :: setErrorsMSE() {
     int outputLayerID = property.n_layers - 1;
     std::vector<Neuron *> outputNeurons = layers.at(outputLayerID)->getNeurons();
@@ -23,4 +25,6 @@ void NeuralNetwork :: setErrorsMSE() {
         error += errors.at(i);
 
     }
+
+    error = sqrt(2 * error) / (double)target.size();
 }

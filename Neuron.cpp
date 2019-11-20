@@ -26,7 +26,7 @@ void Neuron :: activate() {
     switch(activationType) {
         #include "funcs.hpp"
     default:
-        ERROR("activate: WRONG ACTIVATION FUNC")
+        ERROR_LOG("activate: WRONG ACTIVATION FUNC")
         LOG("%d", activationType)
         break;
     }
@@ -41,7 +41,7 @@ void Neuron :: derive() {
     switch(activationType) {
         #include "funcs.hpp"
     default:
-        ERROR("derive: WRONG ACTIVATION FUNC")
+        ERROR_LOG("derive: WRONG ACTIVATION FUNC")
 
         break;
     }

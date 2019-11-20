@@ -12,7 +12,7 @@ void NeuralNetworkProperty :: init() {
 
 bool NeuralNetworkProperty :: isOk() {
     if ((int) n_hidden.size() != n_h_layers) {
-        ERROR("n_hidden.size != n_hidden.size()")
+        ERROR_LOG("n_hidden.size != n_hidden.size()")
         Log();
     } else {
         return true;
@@ -82,7 +82,7 @@ NeuralNetwork :: NeuralNetwork(NeuralNetworkProperty property){
 
 void NeuralNetwork :: setCurrentInput(std::vector<double> input) {
     if((int)input.size() != this->property.n_input) {
-        ERROR("input size is incorrect");
+        ERROR_LOG("input size is incorrect");
     }
 
     this->input = input;
@@ -94,19 +94,15 @@ void NeuralNetwork :: setCurrentInput(std::vector<double> input) {
 
 void NeuralNetwork :: train(std::vector<double> _input,
                             std::vector<double> _target) {
+
     setCurrentInput(_input);
-    //Log();
     setCurrentTarget(_target);
-    //Log();
+
 
     feedForward();
-    //Log();
-
     setErrors();
-    //Log();
-
     backPropogation();
-    //Log();
+
 }
 
 void NeuralNetwork :: Log() {
@@ -126,9 +122,12 @@ void NeuralNetwork :: Log() {
     mTAB
 
     LOG("%d weights:", weights.size())
+    pTAB
     for(int i = 0; i < weights.size(); i ++) {
-        weights[i]->Log();
+        LOG("%dx%d", weights[i]->getNumRows(), weights[i]->getNumCols());
+        //weights[i]->Log(); // FULL LOG
     }
+    mTAB
 
     mTAB
 }

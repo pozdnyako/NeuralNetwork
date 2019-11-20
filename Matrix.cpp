@@ -60,7 +60,7 @@ double Matrix :: getRandomNumber() {
 
 void multiplyMatrix(Matrix *a, Matrix *b, Matrix *c) { // c = c + a * b
     if(a->getNumCols() != b->getNumRows()) {
-        ERROR("a->NumCols != b->NumRows")
+        ERROR_LOG("a->NumCols != b->NumRows")
         a->Log();
         b->Log();
     }
