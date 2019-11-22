@@ -52,8 +52,8 @@ void NeuralNetwork :: backPropogation() {
         double originalValue = weights.at(outputLayerID - 1)->getValue(r, c);
         double deltaValue = deltaWeights->getValue(c, r);
 
-        originalValue = property.momentum * originalValue;
-        deltaValue = property.learningRate * deltaValue;
+        originalValue *= property.momentum;
+        deltaValue *= property.learningRate;
 
         tempNewWeights->setValue(r, c, (originalValue - deltaValue));
     }}
@@ -69,29 +69,40 @@ void NeuralNetwork :: backPropogation() {
     /// OTHER LAYERS
 
     for(int i = outputLayerID - 1; i > 0; i --) {
+        //gradients->Log();
+
         pGradients = new Matrix(*gradients);
         delete gradients;
 
         trasposedPWeights = weights.at(i)->transpose();
 
-        gradients = new Matrix(pGradients->getNumRows(), trasposedPWeights->getNumCols());
+        gradients = new Matrix(1, trasposedPWeights->getNumCols());
+
+
+        //LOG("pG: %dx%d", pGradients->getNumRows(), pGradients->getNumCols());
+        //LOG("g: %dx%d", gradients->getNumRows(), gradients->getNumCols());
+        //LOG("tpW: %dx%d", trasposedPWeights->getNumRows(), trasposedPWeights->getNumCols());
+
 
         multiplyMatrix(pGradients, trasposedPWeights, gradients);
 
         hiddenDerived = layers.at(i)->derivedVals();
+
+        //LOG("hD: %dx%d",hiddenDerived->getNumRows(), hiddenDerived->getNumCols());
 
         for(int col = 0; col < hiddenDerived->getNumRows(); col ++ ){
             double g = gradients->getValue(0, col) * hiddenDerived->getValue(0, col);
             gradients->setValue(0, col, g);
         }
 
-        if(i == 1) {
-            zActivatedVals = layers.at(0)->vals();
-        } else {
-            zActivatedVals = layers.at(0)->activatedVals();
-        }
+        /// COMPUTE NEW WEIGHTS
+
+        zActivatedVals = layers.at(i-1)->activatedVals();
 
         transposedHidden = zActivatedVals->transpose();
+
+        //LOG("tH: %dx%d",transposedHidden->getNumRows(), transposedHidden->getNumCols());
+        //LOG("g: %dx%d", gradients->getNumRows(), gradients->getNumCols());
 
         deltaWeights = new Matrix(transposedHidden->getNumRows(), gradients->getNumCols());
 
@@ -100,13 +111,16 @@ void NeuralNetwork :: backPropogation() {
         tempNewWeights = new Matrix(weights.at(i - 1)->getNumRows(),
                                     weights.at(i - 1)->getNumCols());
 
+        //LOG("nW: %dx%d", tempNewWeights->getNumRows(), tempNewWeights->getNumCols());
+        //LOG("dW: %dx%d", deltaWeights->getNumRows(), deltaWeights->getNumCols());
+
         for(int r = 0; r < tempNewWeights->getNumRows(); r ++) {
             for(int c = 0; c <tempNewWeights->getNumCols(); c ++) {
                 double originalValue = weights.at(i - 1)->getValue(r, c);
                 double deltaValue = deltaWeights->getValue(r, c);
 
-                originalValue = property.momentum * originalValue;
-                deltaValue = property.learningRate * originalValue;
+                originalValue *= property.momentum;
+                deltaValue *= property.learningRate;
 
                 tempNewWeights->setValue(r, c, (originalValue - deltaValue));
             }
@@ -122,6 +136,7 @@ void NeuralNetwork :: backPropogation() {
         delete tempNewWeights;
         delete deltaWeights;
     }
+    delete gradients;
 
     for(int i = 0; i < this->weights.size(); i++) {
         delete weights[i];
@@ -135,4 +150,13 @@ void NeuralNetwork :: backPropogation() {
         weights.push_back(new Matrix(*newWeights.at(i)));
         delete newWeights[i];
     }
+
+    //LOG("\n")
 }
+
+/*Matrix* NeuralNetwork :: generateOutputDelta() {
+    int layerID = property.n_layers - 1;
+    Matrix *delta = new Matrix(1, property.topology.at(LayerID));
+
+
+}*/

@@ -1,16 +1,16 @@
 # depslib dependency file v1.0
-1574228666 source:d:\users\admin\documents\github\neuralnetwork\neuralnetwork.cpp
+1574415787 source:d:\users\admin\documents\github\neuralnetwork\neuralnetwork.cpp
 	"Debug.hpp"
 	"NeuralNetwork.hpp"
 
 1574196434 d:\users\admin\documents\github\neuralnetwork\neuralnetwork.h
 	"Layer.h"
 
-1574228653 source:d:\users\admin\documents\github\neuralnetwork\main.cpp
+1574417127 source:d:\users\admin\documents\github\neuralnetwork\main.cpp
 	<iostream>
 	"NeuralNetwork.hpp"
 
-1574228677 source:d:\users\admin\documents\github\neuralnetwork\neuron.cpp
+1574416150 source:d:\users\admin\documents\github\neuralnetwork\neuron.cpp
 	"Debug.hpp"
 	"Neuron.hpp"
 	<iostream>
@@ -26,7 +26,7 @@
 
 1574147714 d:\users\admin\documents\github\neuralnetwork\funcs.h
 
-1574216730 source:d:\users\admin\documents\github\neuralnetwork\layer.cpp
+1574415721 source:d:\users\admin\documents\github\neuralnetwork\layer.cpp
 	"Debug.hpp"
 	"Layer.hpp"
 
@@ -44,15 +44,15 @@
 	<iostream>
 	<vector>
 
-1574223519 source:d:\users\admin\documents\github\neuralnetwork\matrix.cpp
+1574407419 source:d:\users\admin\documents\github\neuralnetwork\matrix.cpp
 	"Debug.hpp"
 	"Matrix.hpp"
 	<cstdlib>
 
-1574199384 source:d:\users\admin\documents\github\neuralnetwork\feedforward.cpp
+1574414793 source:d:\users\admin\documents\github\neuralnetwork\feedforward.cpp
 	"NeuralNetwork.hpp"
 
-1574227354 source:d:\users\admin\documents\github\neuralnetwork\backpropogation.cpp
+1574417414 source:d:\users\admin\documents\github\neuralnetwork\backpropogation.cpp
 	"NeuralNetwork.hpp"
 	<algorithm>
 
@@ -69,11 +69,11 @@
 	"Matrix.hpp"
 	"Neuron.hpp"
 
-1574199384 d:\users\admin\documents\github\neuralnetwork\matrix.hpp
+1574408450 d:\users\admin\documents\github\neuralnetwork\matrix.hpp
 	<iostream>
 	<vector>
 
-1574228680 d:\users\admin\documents\github\neuralnetwork\neuron.hpp
+1574249720 d:\users\admin\documents\github\neuralnetwork\neuron.hpp
 	"Debug.hpp"
 	<cstdio>
 	<vector>
@@ -82,5 +82,5 @@
 1574228672 d:\users\admin\documents\github\neuralnetwork\debug.hpp
 	<cstdio>
 
-1574199384 d:\users\admin\documents\github\neuralnetwork\funcs.hpp
+1574416291 d:\users\admin\documents\github\neuralnetwork\funcs.hpp
 

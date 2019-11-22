@@ -14,16 +14,16 @@ FUNC( TANH, 1,
     })
 FUNC( RELU, 2,
     {
-        if(activated_val > 0)
+        if(val > 0)
             activated_val = val;
         else
-            activated_val = 0;
+            activated_val = 0.01 * val;
     },
     {
         if(val > 0)
             derived_val = 1;
         else
-            derived_val = 0;
+            derived_val = 0.01;
     })
 FUNC( SIGM, 3,
     {
@@ -31,4 +31,4 @@ FUNC( SIGM, 3,
     },
     {
         derived_val = activated_val * (1 - activated_val);
-    })
+    }) // alpha = 0.5

@@ -6,16 +6,12 @@ void NeuralNetwork :: feedForward() {
     Matrix *c;
 
     for(int i = 0; i < property.n_layers - 1; i++) {
-        a = getVals(i);     // 1 x Size
+        a = getActivated(i);     // 1 x Size
 
         b = getWeight(i);   // Size x nxtSize
 
         c = new Matrix(a->getNumRows(),
                        b->getNumCols());
-        if(i != 0) {
-            delete a;
-            a = this->getDerived(i);
-        }
 
         multiplyMatrix(a, b, c);
 

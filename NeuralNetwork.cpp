@@ -77,7 +77,7 @@ NeuralNetwork :: NeuralNetwork(NeuralNetworkProperty property){
 
     error = 0.0;
 
-    Log();
+//    Log();
 }
 
 void NeuralNetwork :: setCurrentInput(std::vector<double> input) {
@@ -125,7 +125,7 @@ void NeuralNetwork :: Log() {
     pTAB
     for(int i = 0; i < weights.size(); i ++) {
         LOG("%dx%d", weights[i]->getNumRows(), weights[i]->getNumCols());
-        //weights[i]->Log(); // FULL LOG
+        weights[i]->Log(); // FULL LOG
     }
     mTAB
 

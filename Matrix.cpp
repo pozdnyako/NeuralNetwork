@@ -44,10 +44,10 @@ Matrix* Matrix :: copy() {
 
 void Matrix :: Log() {
     LOG("%dx%d", numRows, numCols)
-    pTAB
+    /*pTAB
     for(int i = 0; i < numRows; i ++) {
         LOG_V("% .7f ", values[i])
-    }
+    }*/
     mTAB
 }
 
@@ -55,6 +55,7 @@ void Matrix :: Log() {
 
 double Matrix :: getRandomNumber() {
     double res = (double) rand() / RAND_MAX * (2 * RANGE_SIZE) - RANGE_SIZE;
+    //LOG("%f", res);
     return res;
 }
 

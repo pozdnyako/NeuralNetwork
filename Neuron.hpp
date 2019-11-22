@@ -11,13 +11,11 @@ public:
     Neuron(int);
     Neuron(double _val, int _activationType);
 
-    static const int SIGM = 3;
-/*
+
     #define FUNC(name, num, code1, code2_)\
     static const int name = num;
     #include "funcs.hpp"
     #undef FUNC
-*/
     void activate();
     void derive();
 

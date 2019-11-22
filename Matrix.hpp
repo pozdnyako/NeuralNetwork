@@ -31,7 +31,7 @@ private:
 
     std::vector< std::vector<double> > values;
 
-    const double RANGE_SIZE = 0.0001;
+    const double RANGE_SIZE = 0.001;
     double getRandomNumber();
 };
 

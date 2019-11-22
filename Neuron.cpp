@@ -50,5 +50,5 @@ void Neuron :: derive() {
 
 
 void Neuron :: Log() {
-    LOG("val: %f, aT: %d", val, activationType);
+    LOG("val: %f - %f - %f, aT: %d", val, activated_val, derived_val, activationType);
 }

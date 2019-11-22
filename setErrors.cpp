@@ -23,8 +23,9 @@ void NeuralNetwork :: setErrorsMSE() {
         derivedErrors.at(i) = (y - t);
 
         error += errors.at(i);
-
     }
+
+    //LOG_V("%f", errors);
 
     error = sqrt(2 * error) / (double)target.size();
 }
